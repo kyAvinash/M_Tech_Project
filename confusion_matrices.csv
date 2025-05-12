@@ -1,0 +1,7 @@
+Model,True Negative,False Positive,False Negative,True Positive
+Random Forest,120,31,25,55
+SVM,125,26,34,46
+XGBoost,115,36,27,53
+Decision Tree,110,41,26,54
+LSTM,120,31,38,42
+DNN,116,35,32,48

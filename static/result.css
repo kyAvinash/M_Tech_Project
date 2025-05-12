@@ -1,0 +1,340 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.header {
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.result-container {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+.result-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.result-header {
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.result-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+}
+
+.high-risk {
+    background-color: #ffebee;
+    border-left: 5px solid #e74c3c;
+    color: #c0392b;
+}
+
+.low-risk {
+    background-color: #e8f5e9;
+    border-left: 5px solid #2ecc71;
+    color: #27ae60;
+}
+
+.result-header h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.result-header p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Risk Assessment Section */
+.risk-assessment {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+}
+
+.risk-assessment h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.urgent-alert {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #ffc107;
+    margin: 15px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.urgent-alert i {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.immediate-actions {
+    margin-top: 20px;
+}
+
+.action-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.action-list li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 30px;
+}
+
+.action-list li::before {
+    content: '•';
+    color: #e74c3c;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 10px;
+    top: 2px;
+}
+
+/* Health Metrics */
+.health-metrics {
+    margin-bottom: 30px;
+}
+
+.health-metrics h3, 
+.lifestyle-factors h3, 
+.recommendations h3,
+.symptoms-awareness h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.metric {
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    border-left: 3px solid #3498db;
+}
+
+.metric span {
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.warning-badge {
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+/* Lifestyle Factors */
+.lifestyle-factors {
+    margin-bottom: 30px;
+}
+
+.food-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.food-tag {
+    background-color: #e0f7fa;
+    color: #00838f;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+}
+
+.food-tag.high-gi {
+    background-color: #ffebee;
+    color: #c0392b;
+    font-weight: 600;
+}
+
+/* Recommendations */
+.recommendations {
+    margin-bottom: 30px;
+}
+
+.recommendation-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recommendation-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.recommendation-list li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #3498db;
+}
+
+/* Symptoms Awareness */
+.symptoms-awareness {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.symptoms-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.symptom-tag {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border-left: 3px solid #e74c3c;
+}
+
+/* Model Info */
+.model-info {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    min-width: 200px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .result-container {
+        padding: 0 15px;
+    }
+    
+    .result-card {
+        padding: 20px;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+    }
+    
+    .result-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Tooltip styles (for future enhancements) */
+.tooltip-icon {
+    color: #3498db;
+    margin-left: 5px;
+    cursor: help;
+    font-size: 0.9rem;
+}

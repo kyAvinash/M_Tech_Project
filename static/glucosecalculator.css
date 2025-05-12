@@ -1,0 +1,100 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.calculator-container {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.calculator-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.calculator-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.calculator-header h2 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.calculator-header p {
+    color: #7f8c8d;
+}
+
+.food-selection {
+    margin-bottom: 30px;
+}
+
+.food-selection h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.food-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.food-tag {
+    background-color: #e0f7fa;
+    color: #00838f;
+    padding: 5px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.food-tag:hover {
+    background-color: #b2ebf2;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+    background-color: #e74c3c;
+    border: none;
+}
+
+.calculate-btn:hover {
+    background-color: #c0392b;
+}
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 15px;
+    }
+    
+    .calculator-card {
+        padding: 20px;
+    }
+}

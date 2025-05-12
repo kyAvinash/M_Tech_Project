@@ -1,0 +1,77 @@
+{% from "showlinks.html" import showlinks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Glucose Result | Diabetes Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='result.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            {{ showlinks() }}
+        </div> 
+
+        <div class="result-container">
+            <div class="result-card">
+                <h1><i class="fas fa-tint"></i> Glucose Impact Result</h1>
+                
+                {% if glucoseresult %}
+                <div class="glucose-result">
+                    <div class="glucose-value">
+                        {{ glucoseresult }} mg/dL
+                    </div>
+                    
+                    <div class="glucose-interpretation">
+                        {% if glucoseresult|float < 100 %}
+                            <span class="badge bg-success">Normal Range</span>
+                        {% elif glucoseresult|float >= 100 and glucoseresult|float <= 125 %}
+                            <span class="badge bg-warning">Prediabetes Range</span>
+                        {% else %}
+                            <span class="badge bg-danger">Diabetes Range</span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="foods-consumed">
+                    <h3>Meals Analyzed:</h3>
+                    <div class="food-tags">
+                        {% if meal1 %}<span class="food-tag">{{ meal1 }}</span>{% endif %}
+                        {% if meal2 %}<span class="food-tag">{{ meal2 }}</span>{% endif %}
+                        {% if meal3 %}<span class="food-tag">{{ meal3 }}</span>{% endif %}
+                        {% if meal4 %}<span class="food-tag">{{ meal4 }}</span>{% endif %}
+                        {% if meal5 %}<span class="food-tag">{{ meal5 }}</span>{% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <div class="glucose-info">
+                    <h3>Normal Glucose Levels:</h3>
+                    <ul>
+                        <li><strong>Fasting:</strong> Less than 100 mg/dL</li>
+                        <li><strong>Prediabetes:</strong> 100-125 mg/dL</li>
+                        <li><strong>Diabetes:</strong> 126 mg/dL or higher</li>
+                    </ul>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/glucosecalculator" class="btn btn-outline-primary">
+                        <i class="fas fa-redo"></i> Calculate Again
+                    </a>
+                    <a href="/predict" class="btn btn-primary">
+                        <i class="fas fa-heartbeat"></i> Diabetes Risk Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Truba Institute of Engineering & Information Technology</p>
+            <small>Two-Stage Diabetes Prediction Framework Research</small>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

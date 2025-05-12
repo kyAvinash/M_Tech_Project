@@ -1,0 +1,78 @@
+{% from "showlinks.html" import showlinks %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glucose Calculator | Diabetes Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='glucosecalculator.css')}}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            {{ showlinks() }}
+        </div>  
+
+        <div class="calculator-container">
+            <div class="calculator-card">
+                <div class="calculator-header">
+                    <h2><i class="fas fa-tint"></i> Glucose Level Estimator</h2>
+                    <p>Estimate glucose impact of your frequent meals</p>
+                </div>
+                
+                <div class="food-selection">
+                    <h4>Select from common foods:</h4>
+                    <div class="food-tags">
+                        <span class="food-tag" data-food="cake">Cake</span>
+                        <span class="food-tag" data-food="apple">Apple</span>
+                        <span class="food-tag" data-food="bread">Bread</span>
+                        <span class="food-tag" data-food="rice">Rice</span>
+                        <span class="food-tag" data-food="pasta">Pasta</span>
+                        <span class="food-tag" data-food="soda">Soda</span>
+                        <span class="food-tag" data-food="juice">Juice</span>
+                        <span class="food-tag" data-food="honey">Honey</span>
+                        <span class="food-tag" data-food="potato">Potato</span>
+                        <span class="food-tag" data-food="banana">Banana</span>
+                    </div>
+                </div>
+                
+                <form method="POST" action="/glucosecalculator">
+                    {% for i in range(1, 6) %}
+                    <div class="mb-3">
+                        <label for="meal{{i}}" class="form-label">Meal {{i}}</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-utensils"></i></span>
+                            <input type="text" class="form-control meal-input" id="meal{{i}}" name="meal{{i}}" placeholder="Enter meal {{i}}">
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <button type="submit" class="btn btn-primary calculate-btn">
+                        <i class="fas fa-calculator"></i> Estimate Glucose Impact
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Truba Institute of Engineering & Information Technology</p>
+            <small>Two-Stage Diabetes Prediction Framework Research</small>
+        </div> 
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.food-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                const emptyInput = document.querySelector('.meal-input:placeholder-shown');
+                if (emptyInput) {
+                    emptyInput.value = this.getAttribute('data-food');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

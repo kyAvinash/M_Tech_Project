@@ -1,0 +1,437 @@
+/* home.css */
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+}
+
+.research-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.research-hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.research-hero h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.research-hero .lead {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+}
+
+.performance-highlights {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+}
+
+.performance-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.1);
+    padding: 1.2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.performance-card i {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.performance-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.performance-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Methodology section styles */
+.research-methodology {
+    padding: 5rem 0;
+    background: white;
+}
+
+.methodology-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--accent);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+/* Tradeoff Section */
+.tradeoff-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+  
+  .tradeoff-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .tradeoff-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .tradeoff-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .vs-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  /* Model Pills */
+  .models-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .model-pill {
+    background: rgba(44, 62, 80, 0.1);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+  }
+  
+  .model-pill.dl {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--secondary);
+  }
+  
+  /* Publications */
+  .publications-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  }
+  
+  .publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .publication-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .pub-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  .pub-metrics {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+  
+  .pub-metrics span {
+    background: #f8f9fa;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+.step-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(0,0,0,0.05);
+}
+
+.step h3 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.step p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.metrics {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.metric {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.metric .value {
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+    font-size: 1.1rem;
+}
+
+.metric .label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: block;
+}
+
+/* Model comparison section */
+.model-comparison {
+    padding: 5rem 0;
+    background: var(--light);
+}
+
+.comparison-chart {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+}
+
+.chart-header {
+    display: flex;
+    background: var(--primary);
+    color: rgb(233, 99, 99);
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.chart-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.chart-row:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.best-model {
+    background: rgba(46, 204, 113, 0.1) !important;
+    border-left: 3px solid var(--success);
+}
+
+.model-type, .metric {
+    flex: 1;
+    text-align: center;
+}
+
+.model-type {
+    text-align: left;
+    font-weight: 600;
+}
+
+.chart-footer {
+    padding: 1rem;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Call to action */
+.research-cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    text-align: center;
+}
+
+.research-cta h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.research-cta p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Footer */
+.research-footer {
+    padding: 3rem 0;
+    background: var(--dark);
+    color: white;
+}
+
+.research-footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.research-footer p {
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Add to your existing CSS */
+.dl-model {
+    background: rgba(52, 152, 219, 0.08) !important;
+    border-left: 3px solid var(--secondary);
+  }
+  
+  .chart-row i {
+    margin-right: 8px;
+    color: var(--primary);
+  }
+  
+  .dl-model i {
+    color: var(--secondary);
+  }
+  
+  .best-model i {
+    color: var(--success);
+  }
+  
+  .subheading {
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .research-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .research-hero .lead {
+        font-size: 1.2rem;
+    }
+    
+    .performance-highlights {
+        flex-direction: column;
+    }
+    
+    .methodology-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

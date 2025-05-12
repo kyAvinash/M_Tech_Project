@@ -1,0 +1,333 @@
+{% from "showlinks.html" import showlinks %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Two-Stage Diabetes Prediction Framework</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}" />
+  </head>
+  <body>
+    <div class="research-container">
+      <!-- Navigation -->
+      <header class="research-header">{{ showlinks() }}</header>
+
+      <!-- Hero Section -->
+      <section class="research-hero">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1>Advancing Diabetes Prediction with AI</h1>
+              <p class="lead">
+                A Two-Stage Framework Balancing Accuracy and Interpretability
+              </p>
+
+              <div class="performance-highlights">
+                <!-- Random Forest Card -->
+                <div class="performance-card">
+                  <i class="fas fa-tree"></i>
+                  <div>
+                    <h3>0.815 ROC-AUC</h3>
+                    <p>Random Forest (Best ML Model)</p>
+                    <small>Interpretable with feature importance</small>
+                  </div>
+                </div>
+
+                <!-- LSTM Card -->
+                <div class="performance-card">
+                  <i class="fas fa-network-wired"></i>
+                  <div>
+                    <h3>71% Accuracy</h3>
+                    <p>LSTM Neural Network</p>
+                    <small>Deep learning with complex patterns</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-buttons">
+                <a href="/predict" class="btn btn-primary btn-lg"
+                  >Try Prediction Model</a
+                >
+                <a href="#methodology" class="btn btn-outline-light btn-lg"
+                  >Learn Methodology</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img
+                src="{{url_for('static', filename='images/team.JPG')}}"
+                alt="Two-Stage Framework Diagram"
+                class="img-fluid hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Tradeoff Section -->
+      <section class="tradeoff-section">
+        <div class="container">
+          <div class="tradeoff-card">
+            <i class="fas fa-balance-scale"></i>
+            <h2>Accuracy vs. Interpretability Tradeoff</h2>
+            <div class="tradeoff-comparison">
+              <div class="tradeoff-item">
+                <h3>Random Forest</h3>
+                <div class="metric-badge">ROC-AUC: 0.815</div>
+                <ul>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Explainable predictions
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Feature importance
+                    scores
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Faster computation
+                  </li>
+                </ul>
+              </div>
+              <div class="vs-circle">VS</div>
+              <div class="tradeoff-item">
+                <h3>LSTM Network</h3>
+                <div class="metric-badge">Accuracy: 71%</div>
+                <ul>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Handles complex patterns
+                  </li>
+                  <li><i class="fas fa-times-circle"></i> Black-box nature</li>
+                  <li>
+                    <i class="fas fa-clock"></i> Higher computational cost
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methodology Section -->
+      <section id="methodology" class="research-methodology">
+        <div class="container">
+          <h2 class="text-center">Our Two-Stage Approach</h2>
+          <p class="text-center subheading">
+            Systematic comparison of interpretable ML vs. accurate DL models
+          </p>
+
+          <div class="methodology-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Machine Learning Stage</h3>
+              <p>
+                Evaluated 4 ML models on interpretability and performance
+                metrics
+              </p>
+              <div class="models-list">
+                <span class="model-pill">Random Forest</span>
+                <span class="model-pill">SVM</span>
+                <span class="model-pill">XGBoost</span>
+                <span class="model-pill">Decision Tree</span>
+              </div>
+              <div class="step-metrics">
+                <div class="metric">
+                  <span class="value">0.7576</span>
+                  <span class="label">Best Accuracy (RF)</span>
+                </div>
+                <div class="metric">
+                  <span class="value">0.8150</span>
+                  <span class="label">Best ROC-AUC (RF)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Deep Learning Benchmark</h3>
+              <p>Compared top ML model against neural networks</p>
+              <div class="models-list">
+                <span class="model-pill dl">LSTM</span>
+                <span class="model-pill dl">DNN</span>
+              </div>
+              <div class="step-metrics">
+                <div class="metric">
+                  <span class="value">0.7100</span>
+                  <span class="label">LSTM Accuracy</span>
+                </div>
+                <div class="metric">
+                  <span class="value">0.7316</span>
+                  <span class="label">DNN Accuracy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Clinical Recommendations</h3>
+              <p>Developed practical guidelines for healthcare use cases</p>
+              <ul class="benefits">
+                <li>
+                  <i class="fas fa-check"></i> When to prefer interpretability
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> When to prioritize accuracy
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Computational cost analysis
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Model Comparison Table -->
+      <section class="model-comparison">
+        <div class="container">
+          <h2 class="text-center">Model Performance Comparison</h2>
+          <p class="text-center subheading">
+            Evaluated on Pima Indian Diabetes Dataset (768 samples)
+          </p>
+
+          <div class="comparison-chart">
+            <div class="chart-header">
+              <div class="model-type">Model</div>
+              <div class="metric">Accuracy</div>
+              <div class="metric">Precision</div>
+              <div class="metric">Recall</div>
+              <div class="metric">F1-Score</div>
+              <div class="metric">ROC-AUC</div>
+            </div>
+
+            <!-- Best ML Model -->
+            <div class="chart-row best-model">
+              <div class="model-type">
+                <i class="fas fa-tree"></i> Random Forest
+              </div>
+              <div class="metric">0.7576</div>
+              <div class="metric">0.6395</div>
+              <div class="metric">0.6875</div>
+              <div class="metric">0.6627</div>
+              <div class="metric">0.8150</div>
+            </div>
+
+            <!-- LSTM -->
+            <div class="chart-row dl-model">
+              <div class="model-type">
+                <i class="fas fa-network-wired"></i> LSTM
+              </div>
+              <div class="metric">0.7100</div>
+              <div class="metric">0.5942</div>
+              <div class="metric">0.5125</div>
+              <div class="metric">0.5503</div>
+              <div class="metric">0.7803</div>
+            </div>
+
+            <!-- DNN -->
+            <div class="chart-row dl-model">
+              <div class="model-type"><i class="fas fa-brain"></i> DNN</div>
+              <div class="metric">0.7316</div>
+              <div class="metric">0.6098</div>
+              <div class="metric">0.6250</div>
+              <div class="metric">0.6173</div>
+              <div class="metric">0.7954</div>
+            </div>
+          </div>
+
+          <div class="table-footnote">
+            <p>
+              <sup>*</sup> Random Forest outperforms DL models in
+              interpretability (feature importance) while LSTM captures complex
+              patterns at higher computational cost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Publications -->
+      <section class="publications-section">
+        <div class="container">
+          <h2 class="text-center">Published Research</h2>
+          <div class="publications-grid">
+            <a href="https://scienceijsar.com/article/diabetes-prediction-two-stage-framework-balancing-accuracy-and-interpretability-using" class="publication-card" target="_blank">
+              <div class="pub-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3>Two-Stage Framework for Diabetes Prediction</h3>
+              <p>International Journal of Science Academic Research, 2025</p>
+              <p>International Conference on
+                Multidisciplinary Research
+                [ICMR -2025], Jointly organized by Siam Technology College, Thailand</p>
+                <p>Unique Paper ID: Siam Technology College ICMR -2025/April-2025/IC2052
+                </p>
+              <div class="pub-metrics">
+                <span>ROC-AUC: 0.815</span>
+                <span>LSTM Accuracy: 71%</span>
+              </div>
+            </a>
+
+            <a href="https://doi.org/10.55248/gengpi.6.0325.1119" class="publication-card" target="_blank">
+              <div class="pub-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3>Comparative Review of ML/DL Approaches</h3>
+              <p>IJRPR, Vol 6, Issue 3, 2025</p>
+              <div class="pub-metrics">
+                <span>Dataset: Pima Indian</span>
+                <span>8 Clinical Features</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="research-footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <h5>Two-Stage Diabetes Prediction</h5>
+              <p>Truba Institute of Engineering & IT, Bhopal</p>
+            </div>
+            <div class="footer-links">
+              <a href="/predict">Prediction Tool</a>
+              <a href="/team">Research Team</a>
+              <a href="#methodology">Methodology</a>
+            </div>
+            <div class="footer-contact">
+              <p>
+                <i class="fas fa-envelope"></i>
+                ky0avinash@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; 2025 Two-Stage Diabetes Prediction Framework. All Rights
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Enable tooltips
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
+</html>

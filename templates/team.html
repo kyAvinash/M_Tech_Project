@@ -1,0 +1,321 @@
+{% from "showlinks.html" import showlinks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Team | Two-Stage Diabetes Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='team.css')}}">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="sticky-top">
+        {{ showlinks() }}
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="team-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Research Team</h1>
+                <p>The minds behind the Two-Stage Diabetes Prediction Framework</p>
+                <div class="research-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-tree"></i>
+                        <div>
+                            <h3>0.815 ROC-AUC</h3>
+                            <p>Random Forest Performance</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-network-wired"></i>
+                        <div>
+                            <h3>71% Accuracy</h3>
+                            <p>LSTM Neural Network</p>
+                            <small class="text-muted">Our implementation | Pima dataset</small>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <h3>768 Samples</h3>
+                            <p>Pima Indian Dataset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Overview -->
+    <section class="research-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Research Framework</h2>
+                <p>Innovative approach to diabetes prediction combining ML and DL</p>
+            </div>
+            
+            <div class="framework-diagram">
+                <img src="{{url_for('static', filename='images/framework-diagram.png')}}" 
+                     alt="Two-Stage Framework Diagram" class="img-fluid">
+                <div class="diagram-caption">
+                    <p>Systematic comparison of machine learning (interpretability) vs. deep learning (accuracy)</p>
+                </div>
+            </div>
+            
+            <div class="research-features">
+                <div class="feature">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Balanced Approach</h3>
+                    <p>Random Forest: 0.815 ROC-AUC (Interpretable)<br>
+                       LSTM: 71% Accuracy (Complex Patterns)</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Comprehensive Metrics</h3>
+                    <p>Accuracy, Precision, Recall,<br>F1-Score, ROC-AUC</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hospital-user"></i>
+                    <h3>Clinical Relevance</h3>
+                    <p>Web app provides actionable<br>health recommendations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Project Supervisors</h2>
+                <p>Guiding our research with expertise and vision</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Primary Mentor -->
+                <div class="col-lg-6 mb-4">
+                    <div class="team-card mentor">
+                        <div class="card-header">
+                            <div class="profile-img">
+                                <img src="{{url_for('static', filename='images/Mentor.jpeg')}}" alt="Dr. Amit Saxena">
+                                <span class="badge mentor-badge">Principal Mentor</span>
+                            </div>
+                            <h3>Prof. (Dr.) Amit Saxena</h3>
+                            <p class="position">Associate Professor, CSE Department</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="quote">"I cannot teach anybody anything; I can only make them think."</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope"></i> amitsaxena@trubainstitute.ac.in</p>
+                                <p><i class="fas fa-phone"></i> +91 9229221068</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Co-Mentor -->
+                <div class="col-lg-6 mb-4">
+                    <div class="team-card co-mentor">
+                        <div class="card-header">
+                            <div class="profile-img">
+                                <img src="{{url_for('static', filename='images/co_mentor.jpeg')}}" alt="Arun Pratap Singh">
+                                <span class="badge co-mentor-badge">Co-Mentor</span>
+                            </div>
+                            <h3>Prof. Arun Pratap Singh</h3>
+                            <p class="position">Assistant Professor, CSE Department</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="quote">"The more one judges, the less one loves."</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope"></i> apsingh@trubainstitute.ac.in</p>
+                                <p><i class="fas fa-phone"></i> +91 9755611651</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Team -->
+    <section class="team-section developer-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Development Team</h2>
+                <p>The implementers of our two-stage prediction framework</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="team-card developer">
+                        <div class="card-header">
+                            <div class="profile-img">
+                                <img src="{{url_for('static', filename='images/avi.jpg')}}" alt="Avinash Kumar Yadav">
+                                <span class="badge developer-badge">Lead Developer/Researcher</span>
+                            </div>
+                            <h3>Avinash Kumar Yadav</h3>
+                            <p class="position">M.E. Computer Science & Engineering</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="project-details">
+                                <h4>Research Contributions:</h4>
+                                <ul>
+                                    <li>Designed the two-stage comparative framework for diabetes prediction</li>
+                                    <li>Implemented and evaluated Random Forest (0.815 ROC-AUC) and LSTM (71% Accuracy) models</li>
+                                    <li>Developed the web application interface for clinical decision support</li>
+                                    <li>Published research in international conferences and journals</li>
+                                </ul>
+                            </div>
+                            <div class="publications">
+                                <h4>Key Publications:</h4>
+                                <div class="publication-item">
+                                    <h5>Diabetes Prediction: A Two-Stage Framework for Balancing Accuracy and Interpretability</h5>
+                                    <p>International Journal of Science Academic Research, 2025</p>
+                                    <p>International Conference on
+                                        Multidisciplinary Research
+                                        [ICMR -2025], Jointly organized by Siam Technology College, Thailand</p>
+                                    <div class="pub-metrics">
+                                        <span><i class="fas fa-chart-line"></i> ROC-AUC: 0.815</span>
+                                        <span><i class="fas fa-network-wired"></i> LSTM: 71% Accuracy</span>
+                                    </div>
+                                </div>
+                                <div class="publication-item">
+                                    <h5>A Comprehensive Review of ML and DL Approaches for Diabetes Prediction</h5>
+                                    <p>International Journal of Research Publication and Reviews, 2025</p>
+                                    <div class="pub-metrics">
+                                        <span><i class="fas fa-database"></i> Pima Dataset</span>
+                                        <span><i class="fas fa-cogs"></i> 8 Clinical Features</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                                <span class="badge">Python</span>
+                                <span class="badge">Machine Learning</span>
+                                <span class="badge">Deep Learning</span>
+                                <span class="badge">Flask</span>
+                                <span class="badge">TensorFlow</span>
+                                <span class="badge">Research Methodology</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/kyAvinash" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Methodology -->
+    <section class="methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Research Methodology</h2>
+                <p>The systematic approach behind our two-stage framework</p>
+            </div>
+            
+            <div class="methodology-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Stage 1: ML Model Comparison</h3>
+                    <p>Evaluated 4 ML models to identify best performer:</p>
+                    <div class="step-metrics">
+                        <span class="model-badge">Random Forest</span>
+                        <span class="model-badge">SVM</span>
+                        <span class="model-badge">XGBoost</span>
+                        <span class="model-badge">Decision Tree</span>
+                    </div>
+                    <p class="mt-2"><strong>Result:</strong> Random Forest (0.815 ROC-AUC)</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Stage 2: DL Benchmarking</h3>
+                    <p>Compared top ML model against neural networks:</p>
+                    <div class="step-metrics">
+                        <span class="model-badge dl">LSTM</span>
+                        <span class="model-badge dl">DNN</span>
+                    </div>
+                    <p class="mt-2"><strong>Results:</strong><br>
+                       LSTM: 71% Accuracy<br>
+                       DNN: 73% Accuracy</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Clinical Application</h3>
+                    <p>Developed practical guidelines:</p>
+                    <ul class="step-benefits">
+                        <li>When to prefer interpretability (RF)</li>
+                        <li>When to prioritize accuracy (LSTM)</li>
+                        <li>Computational cost analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Two-Stage Diabetes Prediction</h3>
+                    <p>Truba Institute of Engineering & Information Technology</p>
+                    <p>Master of Engineering in Computer Science & Engineering</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Research Links</h4>
+                    <ul>
+                        <li><a href="/predict">Prediction Model</a></li>
+                        <li><a href="/showcollecteddata">Research Data</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Dataset</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh, India</p>
+                    <p><i class="fas fa-envelope"></i> ky0avinash@gmail.com</p>
+                    <p><i class="fas fa-user-graduate"></i> Avinash Kumar Yadav</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Two-Stage Diabetes Prediction Framework. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
